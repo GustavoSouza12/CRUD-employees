@@ -6,10 +6,15 @@ body{
   display: flex;
   flex-direction: column;
   text-align: flex-start;
+  
+  justify-content: center;
   max-width: 300px;
-  text-align: center;
   
 }
-.form .form_div{
-  
+.form .form_officeDescription{
+  height: 100px;
+}
+
+.form .form_button{
+  margin-top: 20px;
 }
