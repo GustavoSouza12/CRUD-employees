@@ -4,6 +4,8 @@ const cors = require('cors')
 const app = express()
 const mysql = require('mysql')
 
+
+
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -16,6 +18,8 @@ app.use(express.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
 
+
+// Form
 
 app.get('/sos/', (req,res) =>{
     const sqlSelect = "SELECT * FROM form"
@@ -63,6 +67,36 @@ app.put('/update/',(req, res) => {
         if (err) console.log(err)
     })
 })
+
+// Office 
+
+app.post("/office/post/",(req, res) => {
+
+    const officeName = req.body.officeName
+   
+    const officeDescription = req.body.officeDescription
+    
+    const sqlInsert = "INSERT INTO office (office_name, office_description) VALUES (?,?)"
+        db.query(sqlInsert, [officeName, officeDescription], (err,result)=>{
+        console.log(err)
+    })
+   
+})
+app.get('/sos2/', (req,res) =>{
+    const sqlSelect = "SELECT * FROM office"
+    db.query(sqlSelect, (err,result)=>{
+        res.send(result)
+    })
+})
+app.delete('/delete1/:officeName',(req, res) => {
+    const name = req.params.officeName
+    const sqlDelete = "DELETE FROM office WHERE office_name = ?"
+    db.query(sqlDelete, name, (err, result)=>{
+        if (err) console.log(err)
+    })
+})
+
+
 
 
 app.listen(3001), () => {
