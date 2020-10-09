@@ -1,0 +1,42 @@
+.form{
+    display: flex;
+    flex-direction: column; 
+    width: 45%;
+    margin: 0 auto;
+    justify-content: center;
+    
+  }
+  .form .form_title{
+    text-align: center;
+  }
+  .form .form_officeDescription{
+    height: 100px;
+  }
+  
+  .form .form_button{
+    margin-top: 20px;
+  }
+  .employees_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: stretch;
+    margin-top: 40px;
+  }
+  .employees_card{
+    display: grid;
+    grid-template-rows: 6;
+    width: 300px;
+    justify-content: center;
+    margin: 0 20px;
+  
+    background-color: rgb(21, 21, 46);
+    color: rgb(201, 192, 192);
+  }
+  .container {
+    height: 600px;
+    width: 400px;
+    background-color: red;
+    display: none;
+  }
