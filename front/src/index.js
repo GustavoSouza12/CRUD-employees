@@ -6,9 +6,7 @@ import Form from './Components/Form'
 
 
 ReactDOM.render(
- 
     <Form />,
-
   document.getElementById('root')
 );
 
