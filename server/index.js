@@ -7,9 +7,9 @@ const mysql = require('mysql')
 
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
+    host: '192.168.15.101',
+    user: 'TesteUser',
+    password: 'Teste1679',
     database: 'register_form',
 })
 
