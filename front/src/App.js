@@ -1,12 +1,13 @@
 import React from "react"
-import "./App.css"
 
-import Form from "./Components/Form"
-import Office from "./Components/Office"
+import Form from "./Components/EmployeesSection"
+import Office from "./Components/OfficeSection"
+import Navbar from "./Components/Navbar"
 
 const App =() => {
   return (
     <div>
+      <Navbar/>
       <Form/>
       <Office/>
     </div>

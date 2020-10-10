@@ -1,0 +1,132 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
+body{
+  box-sizing: border-box;
+  background: linear-gradient(to right,  #676579,  #3f3d56);
+  scroll-behavior: smooth;
+}
+h1 { 
+    font-size: 2.2em; 
+} 
+h2 { 
+    font-size: 2.0em;     
+} 
+h3 { 
+    font-size: 1.8em; 
+}   
+h4 { 
+    font-size: 1.6em;     
+}    
+h5 { 
+    font-size: 1.4em;     
+}    
+p { 
+    font-size: 1.2em;     
+}
+.App{
+  display: flex;
+}
+.form_container{
+  width: 50%;
+}
+.form{
+    display: flex;
+    flex-direction: column; 
+    width: 50%;
+    margin: 50px auto;
+    padding-bottom: 120px;
+    max-height: 100vh;
+    
+    justify-content: center;
+    color: rgb(218, 214, 214);
+  }
+  .form .form_title{
+    text-align: center;
+    color: white;
+    font-size: 45px;
+  }
+  .form .form_logo{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .form label{
+    font-size: 22px;
+    margin: 3px 0px;
+  }
+  .form input{
+    background-color:  rgba(21, 21, 46, 0.4);
+    border: none;
+    border-radius: 40px;
+    padding: 5px;
+    padding-left: 20px;
+    box-shadow: 5px 5px 5px black;
+
+    color: #dfcce9;
+    font-size: 16px;
+    
+  }
+  .form .form_officeDescription{
+    height: 100px;
+  }
+  
+  .form .form_button{
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 40px;;
+    background-color: #a56ac5;
+    box-shadow: 5px 5px 5px black;
+
+    font-size: 19px;
+
+    transition: all ease 0.2s;
+  }
+  .form .form_button:hover{
+    background-color: #693088;
+    box-shadow: 8px 8px 5px rgb(31, 30, 30);
+
+    cursor: pointer;
+  }
+
+.employees_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: stretch;
+    margin: auto 0;
+    margin-right: 25px;
+    max-width: 50%;
+  }
+  .employees_card{
+    display: grid;
+    min-width: 300px;
+    height: 400px;
+    justify-content: center;
+    margin: 0px 20px 20px 0px !important;
+    border-radius: 40px;
+  
+    background-color: rgba(21, 21, 46, 0.9);
+    color: rgb(201, 192, 192);
+  }
+  .employees_button{
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 40px;;
+    
+    background-color: #a56ac5;
+    box-shadow: 5px 5px 5px black;
+
+    font-size: 19px;
+
+    transition: all ease 0.2s;
+
+  }
+  .employees_button:hover{
+    background-color: #693088;
+    box-shadow: 5px 5px 5px rgb(19, 18, 18);
+
+    cursor: pointer;
+  }

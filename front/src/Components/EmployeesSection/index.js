@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Axios from 'axios'
-import './Form.css'
+import './EmployeesSection.css'
 import FormLogo from './../../Assets/form_logo.svg'
 const Form =() => {
   
@@ -9,7 +9,6 @@ const Form =() => {
     const [formDateOfBirth, setFormDateOfBirth] = useState('')
     const [formSalary, setFormSalary] = useState('')
     const [formOffice, setFormOffice] = useState('')
-    const [formOfficeDescription, setFormOfficeDescription] = useState('')
   
     const [formList, setFormList] = useState([])
 
@@ -21,16 +20,14 @@ const Form =() => {
       formLastName: formLastName,                                
       formDateOfBirth: formDateOfBirth,                                
       formSalary: formSalary,                                
-      formOffice: formOffice,                                  
-      formOfficeDescription: formOfficeDescription,
+      formOffice: formOffice                                
       }).then(()=>{
         setFormList([...formList, {
           formName: formName,
           formLastName: formLastName,
           formDateOfBirth: formDateOfBirth,
           formSalary: formSalary,
-          formOffice: formOffice,
-          formOfficeDescription: formOfficeDescription
+          formOffice: formOffice
         }])
       })
     }
@@ -45,44 +42,41 @@ const Form =() => {
       Axios.delete(`http://localhost:3001/delete/${form}/`)
     }  
 
+    
   
  
     return (
       <div className="App">
-        <div>
-          <form className="form">
+        <div className="form_container">
+          <form className="form" id="form">
     
             <h2 className="form_title">Novo Funcionário</h2>
-            <img className="form_logo" src={FormLogo} />
+            <img className="form_logo" src={FormLogo} alt="Novo funcionário"/>
             <label>Nome:</label>
-            <input type="text" name="formName" maxLength="15" onChange={(e)=>{
+            <input type="text" name="formName" autocomplete="off" maxLength="15" onChange={(e)=>{
               setFormName(e.target.value)
             }}/>
         
             <label>Último nome:</label>
-            <input type="text" name="formLastName" maxLength="15" onChange={(e)=>{
+            <input type="text" name="formLastName" autocomplete="off" maxLength="15" onChange={(e)=>{
               setFormLastName(e.target.value)
             }}/>
             
             <label>Data de nascimento:</label>
-            <input type="date" name="formDateOfBirth"onChange={(e)=>{
+            <input type="date" name="formDateOfBirth" autocomplete="off" onChange={(e)=>{
               setFormDateOfBirth(e.target.value)
             }}/>
         
             <label>Salário</label>
-            <input   name="formSalary" onChange={(e)=>{
+            <input   name="formSalary" autocomplete="off" onChange={(e)=>{
               setFormSalary(e.target.value)
             }}/>
           
             <label>Cargo</label>
-            <input type="text" name="formOffice" size="15" onChange={(e)=>{
+            <input type="text" name="formOffice" autocomplete="off"  onChange={(e)=>{
               setFormOffice(e.target.value)
             }}/>
         
-            <label>Descrição do cargo</label>
-            <input type="text" className="form_officeDescription" name="formOfficeDescription"onChange={(e)=>{
-              setFormOfficeDescription(e.target.value)
-            }}/>
 
             <button className="form_button" onClick={submitData}>Cadastrar</button>
           </form>
@@ -95,10 +89,8 @@ const Form =() => {
                       <p><strong>Nascimento:</strong> {val.form_dateOfBirth}</p>
                       <p><strong>Salário:</strong> R${val.form_salary}</p>
                       <p><strong>Cargo:</strong> {val.form_office}</p>
-                      <p><strong>Descrição:</strong> {val.form_officeDescription}</p>
-                      <div>
-                        <button onClick={() => {deleteForm(val.form_name)}}>Deletar</button>
-                      </div> 
+                      <button className="employees_button" onClick={() => {deleteForm(val.form_name)}}>Deletar</button>
+                   
                     </div> 
                   })}           
         </div>        

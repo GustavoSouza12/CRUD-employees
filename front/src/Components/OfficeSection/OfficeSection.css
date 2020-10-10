@@ -1,0 +1,105 @@
+.office_container{
+    display: flex;
+    height: 100%;
+}
+.office_form_container{
+    width: 50%;
+}
+
+.office{
+    display: flex;
+    flex-direction: column; 
+    width: 50%;
+    margin: 00px auto;
+    padding-bottom: 120px;
+    max-height: 100vh;
+    
+    justify-content: center;
+    color: rgb(218, 214, 214);
+}
+.office_title{
+    text-align: center;
+    color: white;
+    font-size: 45px;
+}
+.office .office_logo{
+    width: 80%;
+  
+    margin: 0 auto;
+}
+.office_label{
+    font-size: 22px;
+    margin: 3px 0px;
+}
+.office_input{
+    background-color:  rgba(21, 21, 46, 0.4);
+    border: none;
+    border-radius: 40px;
+    padding: 5px;
+    padding-left: 20px;
+    box-shadow: 5px 5px 5px black;
+
+    color: #dfcce9;
+    font-size: 16px;
+}
+.office_description{
+    height: 100px;
+}
+.office_button{
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 40px;;
+    background-color: #a56ac5;
+    box-shadow: 5px 5px 5px black;
+
+    font-size: 19px;
+
+    transition: all ease 0.2s;
+  }
+
+.office_button:hover{
+    background-color: #693088;
+    box-shadow: 8px 8px 5px rgb(31, 30, 30);
+
+    cursor: pointer;
+  }
+
+.office_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll !important;
+    justify-content: stretch;
+    margin-top: 40px;
+  }
+.office_container .office_card{
+    display: grid;
+    max-width: 200px;
+    height: 325px;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 40px;
+    padding: 40px;
+  
+    background-color: rgba(21, 21, 46, 0.9);
+    color: rgb(201, 192, 192);
+}
+.office_button{
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 40px;;
+    
+    background-color: #a56ac5;
+    box-shadow: 5px 5px 5px black;
+
+    font-size: 19px;
+
+    transition: all ease 0.2s;
+
+}
+.office_button:hover{
+    background-color: #693088;
+    box-shadow: 5px 5px 5px rgb(19, 18, 18);
+
+    cursor: pointer;
+}
