@@ -15,19 +15,19 @@ body{
 }    
 .navbar .navbar_list .navbar_item{
     list-style-type: none;
-    padding-top: 4px;
+    padding-top: 10px;
     margin: 0px 15px;
 
-    font-size: 35px;
+    font-size: 24px;
 }
 .navbar .navbar_list .navbar_item .navbar_link{
     text-decoration: none;
     color: white;
+    padding: 8px;
     transition: all ease 0.2s;
 }
 .navbar .navbar_list .navbar_item .navbar_link:hover{
     background-color: #9b27d8;
     color: rgba(21, 21, 46, 0.9);
     border-radius: 40px;
-    padding: 5px;
 }

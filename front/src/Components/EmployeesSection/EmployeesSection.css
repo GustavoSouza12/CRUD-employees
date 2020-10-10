@@ -65,16 +65,13 @@ p {
     box-shadow: 5px 5px 5px black;
 
     color: #dfcce9;
-    font-size: 16px;
-    
-  }
-  .form .form_officeDescription{
-    height: 100px;
-  }
-  
+    font-size: 16px; 
+}
   .form .form_button{
     margin-top: 20px;
     height: 40px;
+    width: 30%;
+    margin: 15px auto 0px;
     border-radius: 40px;;
     background-color: #a56ac5;
     box-shadow: 5px 5px 5px black;
@@ -82,13 +79,13 @@ p {
     font-size: 19px;
 
     transition: all ease 0.2s;
-  }
+}
   .form .form_button:hover{
     background-color: #693088;
     box-shadow: 8px 8px 5px rgb(31, 30, 30);
 
     cursor: pointer;
-  }
+}
 
 .employees_container{
     display: flex;
@@ -96,37 +93,76 @@ p {
     flex-wrap: nowrap;
     overflow-x: scroll;
     justify-content: stretch;
+    
     margin: auto 0;
     margin-right: 25px;
     max-width: 50%;
-  }
+}
   .employees_card{
     display: grid;
     min-width: 300px;
     height: 400px;
-    justify-content: center;
+
+    text-align: center;
+    align-items: center;
+
     margin: 0px 20px 20px 0px !important;
     border-radius: 40px;
   
     background-color: rgba(21, 21, 46, 0.9);
-    color: rgb(201, 192, 192);
-  }
+    color: rgb(240, 235, 235);
+}
+  .employees_card p strong{
+    color: #d4b2e6;
+}
   .employees_button{
     margin-top: 20px;
     height: 40px;
+    width: 30%;
+    margin: 0 auto;
     border-radius: 40px;;
-    
     background-color: #a56ac5;
-    box-shadow: 5px 5px 5px black;
-
+  
     font-size: 19px;
 
     transition: all ease 0.2s;
-
-  }
+}
   .employees_button:hover{
     background-color: #693088;
-    box-shadow: 5px 5px 5px rgb(19, 18, 18);
 
     cursor: pointer;
-  }
+}
+  .employees_image{
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 600px){
+    body{
+      text-align: center;
+    }
+    .App{
+      display: inline;
+    }
+    .form_container{
+        width: 100%;
+    }
+    .form .form_title{
+      font-size: 35px;
+    }
+    .form{
+   
+      width: 100%;
+      margin: 0 auto;
+      padding: 70px 0px 120px;
+    }.employees_container{
+      margin: auto 0;
+      max-width: 100%;
+    }
+    .employees_card{
+     
+      min-width: 250px;
+      height: 350px;
+     
+    }
+}

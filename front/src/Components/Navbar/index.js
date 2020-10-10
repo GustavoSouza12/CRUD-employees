@@ -5,8 +5,8 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <ul className="navbar_list">
-                <li className="navbar_item" ><a className="navbar_link" href="#form">Funcionários</a></li>
-                <li className="navbar_item"><a className="navbar_link" href="#office">Cargos</a></li>
+                <li className="navbar_item" ><a className="navbar_link" href="#form">Employees</a></li>
+                <li className="navbar_item"><a className="navbar_link" href="#office">Offices</a></li>
             </ul>
         </nav>
     )
