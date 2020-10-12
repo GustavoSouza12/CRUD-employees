@@ -47,10 +47,11 @@ p {
     text-align: center;
     color: white;
     font-size: 45px;
+    margin-top: 50px;
   }
   .form .form_logo{
     width: 80%;
-    margin: 0 auto;
+    margin:60px auto;
   }
   .form label{
     font-size: 22px;
@@ -98,19 +99,19 @@ p {
     margin-right: 25px;
     max-width: 50%;
 }
-  .employees_card{
-    display: grid;
-    min-width: 300px;
-    height: 400px;
+.employees_card{
+  display: grid;
+  min-width: 400px;
+  height: 400px;
 
-    text-align: center;
-    align-items: center;
+  text-align: center;
+  align-items: center;
 
-    margin: 0px 20px 20px 0px !important;
-    border-radius: 40px;
-  
-    background-color: rgba(21, 21, 46, 0.9);
-    color: rgb(240, 235, 235);
+  margin: 0px 20px 20px 0px !important;
+  border-radius: 40px;
+
+  background-color: rgba(21, 21, 46, 0.9);
+  color: rgb(240, 235, 235);
 }
   .employees_card p strong{
     color: #d4b2e6;
